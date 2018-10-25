@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF0EAFF121819EF200F51713 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EAFF021819EF200F51713 /* AppDelegate.m */; };
+		CF0EAFF421819EF200F51713 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EAFF321819EF200F51713 /* ViewController.m */; };
+		CF0EAFF721819EF200F51713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0EAFF521819EF200F51713 /* Main.storyboard */; };
+		CF0EAFF921819EF300F51713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF0EAFF821819EF300F51713 /* Assets.xcassets */; };
+		CF0EAFFC21819EF300F51713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF0EAFFA21819EF300F51713 /* LaunchScreen.storyboard */; };
+		CF0EAFFF21819EF300F51713 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EAFFE21819EF300F51713 /* main.m */; };
+		CF0EB00921819EF300F51713 /* OpgnGLPaintingTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EB00821819EF300F51713 /* OpgnGLPaintingTestTests.m */; };
+		CF0EB01421819EF300F51713 /* OpgnGLPaintingTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EB01321819EF300F51713 /* OpgnGLPaintingTestUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF0EB00521819EF300F51713 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0EAFE421819EF200F51713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF0EAFEB21819EF200F51713;
+			remoteInfo = OpgnGLPaintingTest;
+		};
+		CF0EB01021819EF300F51713 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF0EAFE421819EF200F51713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF0EAFEB21819EF200F51713;
+			remoteInfo = OpgnGLPaintingTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF0EAFEC21819EF200F51713 /* OpgnGLPaintingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpgnGLPaintingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0EAFEF21819EF200F51713 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CF0EAFF021819EF200F51713 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CF0EAFF221819EF200F51713 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CF0EAFF321819EF200F51713 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CF0EAFF621819EF200F51713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF0EAFF821819EF300F51713 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF0EAFFB21819EF300F51713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF0EAFFD21819EF300F51713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0EAFFE21819EF300F51713 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF0EB00421819EF300F51713 /* OpgnGLPaintingTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpgnGLPaintingTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0EB00821819EF300F51713 /* OpgnGLPaintingTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpgnGLPaintingTestTests.m; sourceTree = "<group>"; };
+		CF0EB00A21819EF300F51713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0EB00F21819EF300F51713 /* OpgnGLPaintingTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpgnGLPaintingTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0EB01321819EF300F51713 /* OpgnGLPaintingTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpgnGLPaintingTestUITests.m; sourceTree = "<group>"; };
+		CF0EB01521819EF300F51713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF0EAFE921819EF200F51713 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0EB00121819EF300F51713 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0EB00C21819EF300F51713 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF0EAFE321819EF200F51713 = {
+			isa = PBXGroup;
+			children = (
+				CF0EAFEE21819EF200F51713 /* OpgnGLPaintingTest */,
+				CF0EB00721819EF300F51713 /* OpgnGLPaintingTestTests */,
+				CF0EB01221819EF300F51713 /* OpgnGLPaintingTestUITests */,
+				CF0EAFED21819EF200F51713 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF0EAFED21819EF200F51713 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EAFEC21819EF200F51713 /* OpgnGLPaintingTest.app */,
+				CF0EB00421819EF300F51713 /* OpgnGLPaintingTestTests.xctest */,
+				CF0EB00F21819EF300F51713 /* OpgnGLPaintingTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF0EAFEE21819EF200F51713 /* OpgnGLPaintingTest */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EAFEF21819EF200F51713 /* AppDelegate.h */,
+				CF0EAFF021819EF200F51713 /* AppDelegate.m */,
+				CF0EAFF221819EF200F51713 /* ViewController.h */,
+				CF0EAFF321819EF200F51713 /* ViewController.m */,
+				CF0EAFF521819EF200F51713 /* Main.storyboard */,
+				CF0EAFF821819EF300F51713 /* Assets.xcassets */,
+				CF0EAFFA21819EF300F51713 /* LaunchScreen.storyboard */,
+				CF0EAFFD21819EF300F51713 /* Info.plist */,
+				CF0EAFFE21819EF300F51713 /* main.m */,
+			);
+			path = OpgnGLPaintingTest;
+			sourceTree = "<group>";
+		};
+		CF0EB00721819EF300F51713 /* OpgnGLPaintingTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EB00821819EF300F51713 /* OpgnGLPaintingTestTests.m */,
+				CF0EB00A21819EF300F51713 /* Info.plist */,
+			);
+			path = OpgnGLPaintingTestTests;
+			sourceTree = "<group>";
+		};
+		CF0EB01221819EF300F51713 /* OpgnGLPaintingTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EB01321819EF300F51713 /* OpgnGLPaintingTestUITests.m */,
+				CF0EB01521819EF300F51713 /* Info.plist */,
+			);
+			path = OpgnGLPaintingTestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF0EAFEB21819EF200F51713 /* OpgnGLPaintingTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF0EB01821819EF300F51713 /* Build configuration list for PBXNativeTarget "OpgnGLPaintingTest" */;
+			buildPhases = (
+				CF0EAFE821819EF200F51713 /* Sources */,
+				CF0EAFE921819EF200F51713 /* Frameworks */,
+				CF0EAFEA21819EF200F51713 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpgnGLPaintingTest;
+			productName = OpgnGLPaintingTest;
+			productReference = CF0EAFEC21819EF200F51713 /* OpgnGLPaintingTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF0EB00321819EF300F51713 /* OpgnGLPaintingTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF0EB01B21819EF300F51713 /* Build configuration list for PBXNativeTarget "OpgnGLPaintingTestTests" */;
+			buildPhases = (
+				CF0EB00021819EF300F51713 /* Sources */,
+				CF0EB00121819EF300F51713 /* Frameworks */,
+				CF0EB00221819EF300F51713 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF0EB00621819EF300F51713 /* PBXTargetDependency */,
+			);
+			name = OpgnGLPaintingTestTests;
+			productName = OpgnGLPaintingTestTests;
+			productReference = CF0EB00421819EF300F51713 /* OpgnGLPaintingTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF0EB00E21819EF300F51713 /* OpgnGLPaintingTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF0EB01E21819EF300F51713 /* Build configuration list for PBXNativeTarget "OpgnGLPaintingTestUITests" */;
+			buildPhases = (
+				CF0EB00B21819EF300F51713 /* Sources */,
+				CF0EB00C21819EF300F51713 /* Frameworks */,
+				CF0EB00D21819EF300F51713 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF0EB01121819EF300F51713 /* PBXTargetDependency */,
+			);
+			name = OpgnGLPaintingTestUITests;
+			productName = OpgnGLPaintingTestUITests;
+			productReference = CF0EB00F21819EF300F51713 /* OpgnGLPaintingTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF0EAFE421819EF200F51713 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "王勇";
+				TargetAttributes = {
+					CF0EAFEB21819EF200F51713 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					CF0EB00321819EF300F51713 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = CF0EAFEB21819EF200F51713;
+					};
+					CF0EB00E21819EF300F51713 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = CF0EAFEB21819EF200F51713;
+					};
+				};
+			};
+			buildConfigurationList = CF0EAFE721819EF200F51713 /* Build configuration list for PBXProject "OpgnGLPaintingTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF0EAFE321819EF200F51713;
+			productRefGroup = CF0EAFED21819EF200F51713 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF0EAFEB21819EF200F51713 /* OpgnGLPaintingTest */,
+				CF0EB00321819EF300F51713 /* OpgnGLPaintingTestTests */,
+				CF0EB00E21819EF300F51713 /* OpgnGLPaintingTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF0EAFEA21819EF200F51713 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0EAFFC21819EF300F51713 /* LaunchScreen.storyboard in Resources */,
+				CF0EAFF921819EF300F51713 /* Assets.xcassets in Resources */,
+				CF0EAFF721819EF200F51713 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0EB00221819EF300F51713 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0EB00D21819EF300F51713 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF0EAFE821819EF200F51713 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0EAFF421819EF200F51713 /* ViewController.m in Sources */,
+				CF0EAFFF21819EF300F51713 /* main.m in Sources */,
+				CF0EAFF121819EF200F51713 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0EB00021819EF300F51713 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0EB00921819EF300F51713 /* OpgnGLPaintingTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF0EB00B21819EF300F51713 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0EB01421819EF300F51713 /* OpgnGLPaintingTestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF0EB00621819EF300F51713 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF0EAFEB21819EF200F51713 /* OpgnGLPaintingTest */;
+			targetProxy = CF0EB00521819EF300F51713 /* PBXContainerItemProxy */;
+		};
+		CF0EB01121819EF300F51713 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF0EAFEB21819EF200F51713 /* OpgnGLPaintingTest */;
+			targetProxy = CF0EB01021819EF300F51713 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF0EAFF521819EF200F51713 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF0EAFF621819EF200F51713 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF0EAFFA21819EF300F51713 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF0EAFFB21819EF300F51713 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF0EB01621819EF300F51713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF0EB01721819EF300F51713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF0EB01921819EF300F51713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3D5W4KF224;
+				INFOPLIST_FILE = OpgnGLPaintingTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wangyong.OpgnGLPaintingTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF0EB01A21819EF300F51713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3D5W4KF224;
+				INFOPLIST_FILE = OpgnGLPaintingTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wangyong.OpgnGLPaintingTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF0EB01C21819EF300F51713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3D5W4KF224;
+				INFOPLIST_FILE = OpgnGLPaintingTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wangyong.OpgnGLPaintingTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpgnGLPaintingTest.app/OpgnGLPaintingTest";
+			};
+			name = Debug;
+		};
+		CF0EB01D21819EF300F51713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3D5W4KF224;
+				INFOPLIST_FILE = OpgnGLPaintingTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wangyong.OpgnGLPaintingTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpgnGLPaintingTest.app/OpgnGLPaintingTest";
+			};
+			name = Release;
+		};
+		CF0EB01F21819EF300F51713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3D5W4KF224;
+				INFOPLIST_FILE = OpgnGLPaintingTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wangyong.OpgnGLPaintingTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpgnGLPaintingTest;
+			};
+			name = Debug;
+		};
+		CF0EB02021819EF300F51713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3D5W4KF224;
+				INFOPLIST_FILE = OpgnGLPaintingTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wangyong.OpgnGLPaintingTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpgnGLPaintingTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF0EAFE721819EF200F51713 /* Build configuration list for PBXProject "OpgnGLPaintingTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0EB01621819EF300F51713 /* Debug */,
+				CF0EB01721819EF300F51713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF0EB01821819EF300F51713 /* Build configuration list for PBXNativeTarget "OpgnGLPaintingTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0EB01921819EF300F51713 /* Debug */,
+				CF0EB01A21819EF300F51713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF0EB01B21819EF300F51713 /* Build configuration list for PBXNativeTarget "OpgnGLPaintingTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0EB01C21819EF300F51713 /* Debug */,
+				CF0EB01D21819EF300F51713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF0EB01E21819EF300F51713 /* Build configuration list for PBXNativeTarget "OpgnGLPaintingTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF0EB01F21819EF300F51713 /* Debug */,
+				CF0EB02021819EF300F51713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF0EAFE421819EF200F51713 /* Project object */;
+}
