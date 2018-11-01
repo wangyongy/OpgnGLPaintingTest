@@ -15,6 +15,31 @@
 		CF0EAFFF21819EF300F51713 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EAFFE21819EF300F51713 /* main.m */; };
 		CF0EB00921819EF300F51713 /* OpgnGLPaintingTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EB00821819EF300F51713 /* OpgnGLPaintingTestTests.m */; };
 		CF0EB01421819EF300F51713 /* OpgnGLPaintingTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EB01321819EF300F51713 /* OpgnGLPaintingTestUITests.m */; };
+		CF0EB1332181B49000F51713 /* fileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EB12E2181B48F00F51713 /* fileUtil.m */; };
+		CF0EB1342181B49000F51713 /* shaderUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = CF0EB1302181B49000F51713 /* shaderUtil.c */; };
+		CF0EB1372181B4A200F51713 /* PaintingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0EB1362181B4A200F51713 /* PaintingView.m */; settings = {COMPILER_FLAGS = "-Wdeprecated-declarations"; }; };
+		CF0EB1392181B86000F51713 /* Particle.png in Resources */ = {isa = PBXBuildFile; fileRef = CF0EB1382181B86000F51713 /* Particle.png */; };
+		CF0EB13D2181B91500F51713 /* point.vsh in Resources */ = {isa = PBXBuildFile; fileRef = CF0EB13B2181B91500F51713 /* point.vsh */; };
+		CF0EB13E2181B91500F51713 /* point.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CF0EB13C2181B91500F51713 /* point.fsh */; };
+		CFC0C9502189AC6E00CA3B75 /* WYSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0C94C2189AC6E00CA3B75 /* WYSelectView.m */; };
+		CFC0C9512189AC6E00CA3B75 /* WYColorSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0C94D2189AC6E00CA3B75 /* WYColorSlider.m */; };
+		CFC0C9602189AC8900CA3B75 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0C9582189AC8900CA3B75 /* UIView+Frame.m */; };
+		CFC0C9612189AC8900CA3B75 /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0C9592189AC8900CA3B75 /* UIButton+Block.m */; };
+		CFC0C9622189AC8900CA3B75 /* UIColor+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0C95A2189AC8900CA3B75 /* UIColor+WY.m */; };
+		CFC0C9632189AC8900CA3B75 /* WYMain.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0C95B2189AC8900CA3B75 /* WYMain.m */; };
+		CFC0C9642189AC8900CA3B75 /* UIAlertController+WY.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0C95C2189AC8900CA3B75 /* UIAlertController+WY.m */; };
+		CFC0C9672189ACC000CA3B75 /* WYDrawingBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC0C9652189ACBF00CA3B75 /* WYDrawingBoardView.m */; };
+		CFC0C96E2189B15000CA3B75 /* wy_revoke_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC0C9692189B15000CA3B75 /* wy_revoke_gray.png */; };
+		CFC0C96F2189B15000CA3B75 /* wy_back.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC0C96A2189B15000CA3B75 /* wy_back.png */; };
+		CFC0C9702189B15000CA3B75 /* wy_eraser.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC0C96B2189B15000CA3B75 /* wy_eraser.png */; };
+		CFC0C9712189B15000CA3B75 /* wy_revoke_white.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC0C96C2189B15000CA3B75 /* wy_revoke_white.png */; };
+		CFC0C9722189B15000CA3B75 /* wy_colorSelect.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC0C96D2189B15000CA3B75 /* wy_colorSelect.png */; };
+		CFDB31432182A8FF00E5307C /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDB313E2182A8FF00E5307C /* Red.png */; };
+		CFDB31442182A8FF00E5307C /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDB313F2182A8FF00E5307C /* Green.png */; };
+		CFDB31452182A8FF00E5307C /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDB31402182A8FF00E5307C /* Blue.png */; };
+		CFDB31462182A8FF00E5307C /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDB31412182A8FF00E5307C /* Yellow.png */; };
+		CFDB31472182A8FF00E5307C /* Purple.png in Resources */ = {isa = PBXBuildFile; fileRef = CFDB31422182A8FF00E5307C /* Purple.png */; };
+		CFDB314A2182ECE900E5307C /* DrawModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDB31492182ECE900E5307C /* DrawModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +76,45 @@
 		CF0EB00F21819EF300F51713 /* OpgnGLPaintingTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpgnGLPaintingTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0EB01321819EF300F51713 /* OpgnGLPaintingTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpgnGLPaintingTestUITests.m; sourceTree = "<group>"; };
 		CF0EB01521819EF300F51713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF0EB12D2181B48F00F51713 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		CF0EB12E2181B48F00F51713 /* fileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fileUtil.m; sourceTree = "<group>"; };
+		CF0EB12F2181B49000F51713 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		CF0EB1302181B49000F51713 /* shaderUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = shaderUtil.c; sourceTree = "<group>"; };
+		CF0EB1312181B49000F51713 /* fileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileUtil.h; sourceTree = "<group>"; };
+		CF0EB1322181B49000F51713 /* shaderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shaderUtil.h; sourceTree = "<group>"; };
+		CF0EB1352181B4A100F51713 /* PaintingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintingView.h; sourceTree = "<group>"; };
+		CF0EB1362181B4A200F51713 /* PaintingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintingView.m; sourceTree = "<group>"; };
+		CF0EB1382181B86000F51713 /* Particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Particle.png; sourceTree = "<group>"; };
+		CF0EB13B2181B91500F51713 /* point.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = point.vsh; sourceTree = "<group>"; };
+		CF0EB13C2181B91500F51713 /* point.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = point.fsh; sourceTree = "<group>"; };
+		CFC0C94C2189AC6E00CA3B75 /* WYSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYSelectView.m; sourceTree = "<group>"; };
+		CFC0C94D2189AC6E00CA3B75 /* WYColorSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYColorSlider.m; sourceTree = "<group>"; };
+		CFC0C94E2189AC6E00CA3B75 /* WYSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYSelectView.h; sourceTree = "<group>"; };
+		CFC0C94F2189AC6E00CA3B75 /* WYColorSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYColorSlider.h; sourceTree = "<group>"; };
+		CFC0C9562189AC8900CA3B75 /* UIAlertController+WY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+WY.h"; sourceTree = "<group>"; };
+		CFC0C9572189AC8900CA3B75 /* WYMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYMain.h; sourceTree = "<group>"; };
+		CFC0C9582189AC8900CA3B75 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		CFC0C9592189AC8900CA3B75 /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
+		CFC0C95A2189AC8900CA3B75 /* UIColor+WY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WY.m"; sourceTree = "<group>"; };
+		CFC0C95B2189AC8900CA3B75 /* WYMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMain.m; sourceTree = "<group>"; };
+		CFC0C95C2189AC8900CA3B75 /* UIAlertController+WY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+WY.m"; sourceTree = "<group>"; };
+		CFC0C95D2189AC8900CA3B75 /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		CFC0C95E2189AC8900CA3B75 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		CFC0C95F2189AC8900CA3B75 /* UIColor+WY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WY.h"; sourceTree = "<group>"; };
+		CFC0C9652189ACBF00CA3B75 /* WYDrawingBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDrawingBoardView.m; sourceTree = "<group>"; };
+		CFC0C9662189ACC000CA3B75 /* WYDrawingBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYDrawingBoardView.h; sourceTree = "<group>"; };
+		CFC0C9692189B15000CA3B75 /* wy_revoke_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wy_revoke_gray.png; sourceTree = "<group>"; };
+		CFC0C96A2189B15000CA3B75 /* wy_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wy_back.png; sourceTree = "<group>"; };
+		CFC0C96B2189B15000CA3B75 /* wy_eraser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wy_eraser.png; sourceTree = "<group>"; };
+		CFC0C96C2189B15000CA3B75 /* wy_revoke_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wy_revoke_white.png; sourceTree = "<group>"; };
+		CFC0C96D2189B15000CA3B75 /* wy_colorSelect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wy_colorSelect.png; sourceTree = "<group>"; };
+		CFDB313E2182A8FF00E5307C /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
+		CFDB313F2182A8FF00E5307C /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
+		CFDB31402182A8FF00E5307C /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
+		CFDB31412182A8FF00E5307C /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
+		CFDB31422182A8FF00E5307C /* Purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Purple.png; sourceTree = "<group>"; };
+		CFDB31482182ECE900E5307C /* DrawModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawModel.h; sourceTree = "<group>"; };
+		CFDB31492182ECE900E5307C /* DrawModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +169,10 @@
 				CF0EAFF021819EF200F51713 /* AppDelegate.m */,
 				CF0EAFF221819EF200F51713 /* ViewController.h */,
 				CF0EAFF321819EF200F51713 /* ViewController.m */,
+				CFCFAB5D218A910A00F2BD68 /* Draw */,
+				CFC0C9682189B15000CA3B75 /* Images */,
+				CFC0C9552189AC8900CA3B75 /* Tools */,
+				CF0EB12C2181B48000F51713 /* openGL */,
 				CF0EAFF521819EF200F51713 /* Main.storyboard */,
 				CF0EAFF821819EF300F51713 /* Assets.xcassets */,
 				CF0EAFFA21819EF300F51713 /* LaunchScreen.storyboard */,
@@ -130,6 +198,82 @@
 				CF0EB01521819EF300F51713 /* Info.plist */,
 			);
 			path = OpgnGLPaintingTestUITests;
+			sourceTree = "<group>";
+		};
+		CF0EB12C2181B48000F51713 /* openGL */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EB13A2181B91500F51713 /* Shaders */,
+				CF0EB12F2181B49000F51713 /* debug.h */,
+				CF0EB1312181B49000F51713 /* fileUtil.h */,
+				CF0EB12E2181B48F00F51713 /* fileUtil.m */,
+				CF0EB12D2181B48F00F51713 /* Prefix.pch */,
+				CF0EB1302181B49000F51713 /* shaderUtil.c */,
+				CF0EB1322181B49000F51713 /* shaderUtil.h */,
+			);
+			path = openGL;
+			sourceTree = "<group>";
+		};
+		CF0EB13A2181B91500F51713 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EB13B2181B91500F51713 /* point.vsh */,
+				CF0EB13C2181B91500F51713 /* point.fsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		CFC0C9552189AC8900CA3B75 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CFC0C9572189AC8900CA3B75 /* WYMain.h */,
+				CFC0C95B2189AC8900CA3B75 /* WYMain.m */,
+				CFC0C95E2189AC8900CA3B75 /* UIView+Frame.h */,
+				CFC0C9582189AC8900CA3B75 /* UIView+Frame.m */,
+				CFC0C95D2189AC8900CA3B75 /* UIButton+Block.h */,
+				CFC0C9592189AC8900CA3B75 /* UIButton+Block.m */,
+				CFC0C9562189AC8900CA3B75 /* UIAlertController+WY.h */,
+				CFC0C95C2189AC8900CA3B75 /* UIAlertController+WY.m */,
+				CFC0C95A2189AC8900CA3B75 /* UIColor+WY.m */,
+				CFC0C95F2189AC8900CA3B75 /* UIColor+WY.h */,
+			);
+			name = Tools;
+			path = ../../../self/github/WYDrawingBoard/WYDrawingBoard/WYDrawingBoard/Tools;
+			sourceTree = "<group>";
+		};
+		CFC0C9682189B15000CA3B75 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EB1382181B86000F51713 /* Particle.png */,
+				CFDB31402182A8FF00E5307C /* Blue.png */,
+				CFDB313F2182A8FF00E5307C /* Green.png */,
+				CFDB31422182A8FF00E5307C /* Purple.png */,
+				CFDB313E2182A8FF00E5307C /* Red.png */,
+				CFDB31412182A8FF00E5307C /* Yellow.png */,
+				CFC0C9692189B15000CA3B75 /* wy_revoke_gray.png */,
+				CFC0C96A2189B15000CA3B75 /* wy_back.png */,
+				CFC0C96B2189B15000CA3B75 /* wy_eraser.png */,
+				CFC0C96C2189B15000CA3B75 /* wy_revoke_white.png */,
+				CFC0C96D2189B15000CA3B75 /* wy_colorSelect.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		CFCFAB5D218A910A00F2BD68 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				CF0EB1352181B4A100F51713 /* PaintingView.h */,
+				CF0EB1362181B4A200F51713 /* PaintingView.m */,
+				CFDB31482182ECE900E5307C /* DrawModel.h */,
+				CFDB31492182ECE900E5307C /* DrawModel.m */,
+				CFC0C9662189ACC000CA3B75 /* WYDrawingBoardView.h */,
+				CFC0C9652189ACBF00CA3B75 /* WYDrawingBoardView.m */,
+				CFC0C94F2189AC6E00CA3B75 /* WYColorSlider.h */,
+				CFC0C94D2189AC6E00CA3B75 /* WYColorSlider.m */,
+				CFC0C94E2189AC6E00CA3B75 /* WYSelectView.h */,
+				CFC0C94C2189AC6E00CA3B75 /* WYSelectView.m */,
+			);
+			path = Draw;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +379,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFDB31452182A8FF00E5307C /* Blue.png in Resources */,
+				CFDB31462182A8FF00E5307C /* Yellow.png in Resources */,
 				CF0EAFFC21819EF300F51713 /* LaunchScreen.storyboard in Resources */,
+				CFC0C9722189B15000CA3B75 /* wy_colorSelect.png in Resources */,
 				CF0EAFF921819EF300F51713 /* Assets.xcassets in Resources */,
+				CF0EB13E2181B91500F51713 /* point.fsh in Resources */,
+				CF0EB13D2181B91500F51713 /* point.vsh in Resources */,
+				CFDB31472182A8FF00E5307C /* Purple.png in Resources */,
+				CFC0C9702189B15000CA3B75 /* wy_eraser.png in Resources */,
 				CF0EAFF721819EF200F51713 /* Main.storyboard in Resources */,
+				CFDB31442182A8FF00E5307C /* Green.png in Resources */,
+				CF0EB1392181B86000F51713 /* Particle.png in Resources */,
+				CFC0C9712189B15000CA3B75 /* wy_revoke_white.png in Resources */,
+				CFC0C96E2189B15000CA3B75 /* wy_revoke_gray.png in Resources */,
+				CFDB31432182A8FF00E5307C /* Red.png in Resources */,
+				CFC0C96F2189B15000CA3B75 /* wy_back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +419,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC0C9602189AC8900CA3B75 /* UIView+Frame.m in Sources */,
+				CFC0C9502189AC6E00CA3B75 /* WYSelectView.m in Sources */,
 				CF0EAFF421819EF200F51713 /* ViewController.m in Sources */,
+				CFC0C9622189AC8900CA3B75 /* UIColor+WY.m in Sources */,
+				CFC0C9512189AC6E00CA3B75 /* WYColorSlider.m in Sources */,
+				CFDB314A2182ECE900E5307C /* DrawModel.m in Sources */,
+				CFC0C9642189AC8900CA3B75 /* UIAlertController+WY.m in Sources */,
+				CFC0C9632189AC8900CA3B75 /* WYMain.m in Sources */,
+				CFC0C9612189AC8900CA3B75 /* UIButton+Block.m in Sources */,
 				CF0EAFFF21819EF300F51713 /* main.m in Sources */,
+				CF0EB1372181B4A200F51713 /* PaintingView.m in Sources */,
+				CF0EB1342181B49000F51713 /* shaderUtil.c in Sources */,
 				CF0EAFF121819EF200F51713 /* AppDelegate.m in Sources */,
+				CFC0C9672189ACC000CA3B75 /* WYDrawingBoardView.m in Sources */,
+				CF0EB1332181B49000F51713 /* fileUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +614,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wangyong.OpgnGLPaintingTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wdeprecated-declarations";
 			};
 			name = Debug;
 		};
@@ -462,6 +632,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wangyong.OpgnGLPaintingTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wdeprecated-declarations";
 			};
 			name = Release;
 		};
