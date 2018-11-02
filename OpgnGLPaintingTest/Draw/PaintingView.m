@@ -104,7 +104,28 @@ typedef struct {
 	return [CAEAGLLayer class];
 }
 
-- (void)loadOpenGL
+#pragma mark - openGL init
+// If our view is resized, we'll be asked to layout subviews.
+// This is the perfect opportunity to also update the framebuffer so that it is
+// the same size as our display area.
+-(void)layoutSubviews
+{
+    [self setupLayer];
+    
+    [self setupContext];
+    
+    [self setupBuffer];
+    
+    [self setupShaders];
+
+    if (!_initialized) {
+        _initialized = [self render];
+    }
+    else {
+        [self resizeFromLayer:(CAEAGLLayer*)self.layer];
+    }
+}
+- (void)setupLayer
 {
     CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
     
@@ -112,33 +133,55 @@ typedef struct {
     // In this application, we want to retain the EAGLDrawable contents after a call to presentRenderbuffer.
     eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
                                     [NSNumber numberWithBool:YES], kEAGLDrawablePropertyRetainedBacking, kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat, nil];
-    
+    //设置放大倍数
+    [self setContentScaleFactor:[[UIScreen mainScreen] scale]];
+}
+
+- (void)setupContext
+{
+    // 指定 OpenGL 渲染 API 的版本，在这里我们使用 OpenGL ES 2.0
     _context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     
     if (!_context || ![EAGLContext setCurrentContext:_context]) {
-        return;
+        
+        NSLog(@"Failed to initialize OpenGLES 2.0 context");
+        
+        exit(1);
     }
-    
-    self.userInteractionEnabled = YES;
-
-    // Set the view's scale factor as you wish
-    self.contentScaleFactor = [[UIScreen mainScreen] scale];
 }
-// If our view is resized, we'll be asked to layout subviews.
-// This is the perfect opportunity to also update the framebuffer so that it is
-// the same size as our display area.
--(void)layoutSubviews
+
+- (void)setupBuffer
 {
-	[EAGLContext setCurrentContext:_context];
+    glDeleteFramebuffers(1, &_viewFramebuffer);
     
-    if (!_initialized) {
-        _initialized = [self initGL];
-    }
-    else {
-        [self resizeFromLayer:(CAEAGLLayer*)self.layer];
+    _viewRenderbuffer = 0;
+    
+    glDeleteRenderbuffers(1, &_viewRenderbuffer);
+    
+    _viewRenderbuffer = 0;
+
+    glGenFramebuffers(1, &_viewFramebuffer);
+    
+    glGenRenderbuffers(1, &_viewRenderbuffer);
+
+    glBindFramebuffer(GL_FRAMEBUFFER, _viewFramebuffer);
+    
+    glBindRenderbuffer(GL_RENDERBUFFER, _viewRenderbuffer);
+    
+    // 为 颜色缓冲区 分配存储空间
+    [_context renderbufferStorage:GL_RENDERBUFFER fromDrawable:(id<EAGLDrawable>)self.layer];
+    
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _viewRenderbuffer);
+    
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_backingWidth);
+    
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &_backingHeight);
+    
+    if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+    {
+        NSLog(@"failed to make complete framebuffer object %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
     }
 }
-
 - (void)setupShaders
 {
 	for (int i = 0; i < NUM_PROGRAMS; i++)
@@ -243,35 +286,9 @@ typedef struct {
     
     return texture;
 }
-
-- (BOOL)initGL
+- (BOOL)render
 {
-    // Generate IDs for a framebuffer object and a color renderbuffer
-	glGenFramebuffers(1, &_viewFramebuffer);
-	glGenRenderbuffers(1, &_viewRenderbuffer);
-	
-	glBindFramebuffer(GL_FRAMEBUFFER, _viewFramebuffer);
-	glBindRenderbuffer(GL_RENDERBUFFER, _viewRenderbuffer);
-	// This call associates the storage for the current render buffer with the EAGLDrawable (our CAEAGLLayer)
-	// allowing us to draw into a buffer that will later be rendered to screen wherever the layer is (which corresponds with our view).
-	[_context renderbufferStorage:GL_RENDERBUFFER fromDrawable:(id<EAGLDrawable>)self.layer];
-	glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _viewRenderbuffer);
-	
-	glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_backingWidth);
-	glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &_backingHeight);
-	
-	// For this sample, we do not need a depth buffer. If you do, this is how you can create one and attach it to the framebuffer:
-//    glGenRenderbuffers(1, &depthRenderbuffer);
-//    glBindRenderbuffer(GL_RENDERBUFFER, depthRenderbuffer);
-//    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, backingWidth, backingHeight);
-//    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthRenderbuffer);
-	
-	if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-	{
-		NSLog(@"failed to make complete framebuffer object %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
-		return NO;
-	}
-    
+
     // Setup the view port in Pixels
     glViewport(0, 0, _backingWidth, _backingHeight);
     
@@ -280,9 +297,6 @@ typedef struct {
     
     // Load the brush texture
     _brushTexture = [self textureFromName:@"Particle.png"];
-    
-    // Load shaders
-    [self setupShaders];
     
     // Enable blending and set a blending function appropriate for premultiplied alpha pixel data
     glEnable(GL_BLEND);
@@ -298,12 +312,7 @@ typedef struct {
     [_context renderbufferStorage:GL_RENDERBUFFER fromDrawable:layer];
 	glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_backingWidth);
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &_backingHeight);
-	
-    // For this sample, we do not need a depth buffer. If you do, this is how you can allocate depth buffer backing:
-//    glBindRenderbuffer(GL_RENDERBUFFER, depthRenderbuffer);
-//    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, backingWidth, backingHeight);
-//    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthRenderbuffer);
-	
+
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
 	{
         NSLog(@"Failed to make complete framebuffer objectz %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
@@ -389,9 +398,6 @@ typedef struct {
         }];
         
         [self addGestureRecognizer:tap];
-        
-        
-        [self loadOpenGL];
     }
     return self;
 }
