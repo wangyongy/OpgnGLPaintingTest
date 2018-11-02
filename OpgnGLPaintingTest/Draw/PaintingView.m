@@ -116,7 +116,7 @@ typedef struct {
     
     [self setupBuffer];
     
-    [self setupShaders];
+//    [self setupShaders];
 
     if (!_initialized) {
         _initialized = [self render];
@@ -176,11 +176,6 @@ typedef struct {
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_backingWidth);
     
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &_backingHeight);
-    
-    if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-    {
-        NSLog(@"failed to make complete framebuffer object %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
-    }
 }
 - (void)setupShaders
 {
@@ -288,7 +283,7 @@ typedef struct {
 }
 - (BOOL)render
 {
-
+    
     // Setup the view port in Pixels
     glViewport(0, 0, _backingWidth, _backingHeight);
     
@@ -298,13 +293,61 @@ typedef struct {
     // Load the brush texture
     _brushTexture = [self textureFromName:@"Particle.png"];
     
+    // Load shaders
+    [self setupShaders];
+    
     // Enable blending and set a blending function appropriate for premultiplied alpha pixel data
     glEnable(GL_BLEND);
     glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
  
     return YES;
 }
-
+- (BOOL)initGL
+{
+    // Generate IDs for a framebuffer object and a color renderbuffer
+    glGenFramebuffers(1, &_viewFramebuffer);
+    glGenRenderbuffers(1, &_viewRenderbuffer);
+    
+    glBindFramebuffer(GL_FRAMEBUFFER, _viewFramebuffer);
+    glBindRenderbuffer(GL_RENDERBUFFER, _viewRenderbuffer);
+    // This call associates the storage for the current render buffer with the EAGLDrawable (our CAEAGLLayer)
+    // allowing us to draw into a buffer that will later be rendered to screen wherever the layer is (which corresponds with our view).
+    [_context renderbufferStorage:GL_RENDERBUFFER fromDrawable:(id<EAGLDrawable>)self.layer];
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _viewRenderbuffer);
+    
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_backingWidth);
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &_backingHeight);
+    
+    // For this sample, we do not need a depth buffer. If you do, this is how you can create one and attach it to the framebuffer:
+    //    glGenRenderbuffers(1, &depthRenderbuffer);
+    //    glBindRenderbuffer(GL_RENDERBUFFER, depthRenderbuffer);
+    //    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, backingWidth, backingHeight);
+    //    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthRenderbuffer);
+    
+    if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+    {
+        NSLog(@"failed to make complete framebuffer object %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
+        return NO;
+    }
+    
+    // Setup the view port in Pixels
+    glViewport(0, 0, _backingWidth, _backingHeight);
+    
+    // Create a Vertex Buffer Object to hold our data
+    glGenBuffers(1, &_vboId);
+    
+    // Load the brush texture
+    _brushTexture = [self textureFromName:@"Particle.png"];
+    
+    // Load shaders
+    [self setupShaders];
+    
+    // Enable blending and set a blending function appropriate for premultiplied alpha pixel data
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+    
+    return YES;
+}
 - (BOOL)resizeFromLayer:(CAEAGLLayer *)layer
 {
 	// Allocate color buffer backing based on the current layer size
